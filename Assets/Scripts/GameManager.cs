@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance { get; private set; } //for other scripts access this GameManager
     [SerializeField] int targetScore = 10;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] GameObject winPanel;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1f;   // timeScale survives a scene load
+        Time.timeScale = 1f;  
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
