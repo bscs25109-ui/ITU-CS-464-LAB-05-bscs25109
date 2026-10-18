@@ -125,5 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93fee1a65d5db14793b185ec453ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  coinType: 1
   value: 1
   spinSpeed: 90

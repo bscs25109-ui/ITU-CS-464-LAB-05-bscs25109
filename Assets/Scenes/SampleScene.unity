@@ -685,8 +685,8 @@ Transform:
   m_GameObject: {fileID: 668518763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.91, y: -0.1951, z: 0.1944}
-  m_LocalScale: {x: 0.1724, y: 1.5298, z: 19.936275}
+  m_LocalPosition: {x: -12.43, y: -0.1951, z: 0.1741}
+  m_LocalScale: {x: 0.1724, y: 1.5298, z: 24.91335}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913802743}
@@ -876,8 +876,8 @@ Transform:
   m_GameObject: {fileID: 764280325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.1951, z: 10.1}
-  m_LocalScale: {x: 19.977114, y: 1.5298, z: 0.1724}
+  m_LocalPosition: {x: -0.0223, y: -0.1951, z: 12.65}
+  m_LocalScale: {x: 24.986534, y: 1.5298, z: 0.1724}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913802743}
@@ -1121,8 +1121,8 @@ Transform:
   m_GameObject: {fileID: 1068780863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.895, y: -0.1951, z: 0.1944}
-  m_LocalScale: {x: 0.1724, y: 1.5298, z: 19.936275}
+  m_LocalPosition: {x: 12.42, y: -0.1951, z: 0.2294}
+  m_LocalScale: {x: 0.1724, y: 1.5298, z: 24.999468}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913802743}
@@ -1233,8 +1233,8 @@ Transform:
   m_GameObject: {fileID: 1099263492}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.1951, z: -9.79}
-  m_LocalScale: {x: 19.977114, y: 1.5298, z: 0.1724}
+  m_LocalPosition: {x: -0.0067, y: -0.1951, z: -12.19}
+  m_LocalScale: {x: 24.993727, y: 1.5298, z: 0.1724}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913802743}
@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   coinPrefab: {fileID: 1516547418235769818, guid: 033ffd2ab14a2844c8cda459bd52d930, type: 3}
   redCoinPrefab: {fileID: 1516547418235769818, guid: f49e1276245f5ca45ae45b961313a587, type: 3}
+  blueCoinPrefab: {fileID: 1516547418235769818, guid: 076ed31f72fc92648a665ce110329a77, type: 3}
   player: {fileID: 1135686157}
   interval: 1.5
   maxCoins: 5
@@ -1847,7 +1848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 209656eb3afebad4bb3753f212db785d, type: 2}
+  - {fileID: 2100000, guid: 8ec3cb775df238242908b93219efe584, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1889,7 +1890,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0083, y: -0.94801, z: 0.22184}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913802743}

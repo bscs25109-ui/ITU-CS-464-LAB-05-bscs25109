@@ -4,11 +4,13 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject coinPrefab;  // coin prefab to spawn
     [SerializeField] GameObject redCoinPrefab; // red coin prefab
+    [SerializeField] GameObject blueCoinPrefab; // blue coin prefab
     [SerializeField] Transform player;      // player position used to avoid spawning too close
     [SerializeField] float interval = 1.5f;  // seconds between spawn attempts
     [SerializeField] int maxCoins = 5;      // maximum coins present at once
     [SerializeField] float area = 7f;       // spawn range on the X and Z axes
     bool redCoinSpawned;
+    bool blueCoinsSpawned;
     void Start() => InvokeRepeating(nameof(SpawnCoin), 1f, interval);
     // wait one second, then keep trying to spawn coins
     void SpawnCoin()
@@ -42,13 +44,55 @@ public class Spawner : MonoBehaviour
             pos.z = player.position.z >= 0f ? -area : area;
         }
 
-        // Spawn the red coin separately from normal coins
-        Instantiate(
+        // Store the red coin that was just created
+        GameObject redCoin = Instantiate(
             redCoinPrefab,
             pos,
             Quaternion.Euler(90f, 0f, 0f)
         );
 
+        // Give this red coin a reference to the Spawner
+        redCoin.GetComponent<Coin>().SetSpawner(this);
+
         Debug.Log("Red coin spawned!");
+    }
+    public void SpawnBlueCoins()
+    {
+        // Only spawn one batch of 50 blue coins
+        if (blueCoinsSpawned) return;
+        blueCoinsSpawned = true;
+
+        // Save the player's position when the red coin is collected
+        Vector3 center = player.position;
+        center.y = 0.5f;
+
+        // Create 50 coins in three circles around the player
+        SpawnBlueRing(center, 10, 1.5f);
+        SpawnBlueRing(center, 16, 2.7f);
+        SpawnBlueRing(center, 24, 4f);
+
+        Debug.Log("50 blue coins spawned!");
+    }
+
+    void SpawnBlueRing(Vector3 center, int count, float radius)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            // Divide a full circle into equal angles
+            float angle = i * Mathf.PI * 2f / count;
+
+            // Calculate the position around the circle
+            float x = Mathf.Cos(angle) * radius;
+            float z = Mathf.Sin(angle) * radius;
+
+            Vector3 pos = center + new Vector3(x, 0f, z);
+
+            // Spawn an upright blue coin
+            Instantiate(
+                blueCoinPrefab,
+                pos,
+                Quaternion.Euler(90f, 0f, 0f)
+            );
+        }
     }
 }
