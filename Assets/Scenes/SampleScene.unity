@@ -1077,6 +1077,7 @@ MonoBehaviour:
   targetScore: 10
   scoreText: {fileID: 485437587}
   winPanel: {fileID: 1646723096}
+  spawner: {fileID: 1812893689}
 --- !u!4 &923531513
 Transform:
   m_ObjectHideFlags: 0
@@ -1760,6 +1761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   coinPrefab: {fileID: 1516547418235769818, guid: 033ffd2ab14a2844c8cda459bd52d930, type: 3}
+  redCoinPrefab: {fileID: 1516547418235769818, guid: f49e1276245f5ca45ae45b961313a587, type: 3}
   player: {fileID: 1135686157}
   interval: 1.5
   maxCoins: 5
