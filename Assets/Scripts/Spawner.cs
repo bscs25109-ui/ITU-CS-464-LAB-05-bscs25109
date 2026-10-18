@@ -61,6 +61,8 @@ public class Spawner : MonoBehaviour
         // Only spawn one batch of 50 blue coins
         if (blueCoinsSpawned) return;
         blueCoinsSpawned = true;
+        // Reveal the bonus counter at 0/50
+        GameManager.Instance.ShowBonusCounter();
 
         // Save the player's position when the red coin is collected
         Vector3 center = player.position;

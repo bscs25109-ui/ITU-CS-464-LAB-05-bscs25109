@@ -57,8 +57,8 @@ public class Coin : MonoBehaviour
                 break;
 
             case CoinType.Blue:
-                // Bonus counting will be added in Task 3
-                Debug.Log("Blue coin collected");
+                // Add one to the bonus counter
+                GameManager.Instance.AddBonusCoin();
                 break;
         }
 
